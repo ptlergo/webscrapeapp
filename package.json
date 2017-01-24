@@ -1,0 +1,26 @@
+{
+  "name": "webscrapeapp",
+  "version": "1.0.0",
+  "description": "simple web scraping app",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptlergo/webscrapeapp.git"
+  },
+  "keywords": [
+    "web",
+    "scrape",
+    "x-ray",
+    "patrick",
+    "funom"
+  ],
+  "author": "Patrick Funom",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ptlergo/webscrapeapp/issues"
+  },
+  "homepage": "https://github.com/ptlergo/webscrapeapp#readme"
+}
