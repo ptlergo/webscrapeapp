@@ -14,8 +14,8 @@ x("https://www.google.ca/search?site=&source=hp&q=spice+and+wolf&oq=spice+and+wo
        var start = item.link.indexOf('q=')
        var end = item.link.indexOf('&sa')
        item.link = item.link.substring(start + 2, end)
+       console.log(item);
      })
      callback(null, obj)
-     console.log(callback());
    }
  })
