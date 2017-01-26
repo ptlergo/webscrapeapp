@@ -10,6 +10,11 @@ console.log('xray run');
 */
 x("https://www.google.ca/search?site=&source=hp&q=spice+and+wolf&oq=spice+and+wolf", '.g', [{
    link: 'a@href',
+   details: x('a@href', {
+     title: 'title',
+     link: 'a@href',
+     linkText: 'a@Text'
+   })
  }]).paginate('#pnnext@href').limit(5)
  ((err, obj) => {
    if(err) {
@@ -17,7 +22,7 @@ x("https://www.google.ca/search?site=&source=hp&q=spice+and+wolf&oq=spice+and+wo
    }
    else {
      obj.forEach((item) => {
-      //  console.log(obj)
+      //  clean up link url
        var start = item.link.indexOf('q=')
        var end = item.link.indexOf('&sa')
        item.link = item.link.substring(start + 2, end)
