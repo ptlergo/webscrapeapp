@@ -12,7 +12,11 @@ app.get('/', (req, res) => {
   const stream = xray(reqUrl, reqSelect, [{
     title: 'h1 a',
     link: '.article-title@href',
-  }]).stream();
+    arthur: 'span a',
+    excerpt: 'p',
+    thumbnail: 'div iframe'
+  }]).paginate('.nav-previous a@href').limit(3)
+  .stream();
   stream.pipe(res);
 });
 
