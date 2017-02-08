@@ -5,11 +5,23 @@ console.log('xray run');
 app = express();
 
 // URL, targeted selector, object literal structure
-const reqUrl = 'https://blog.ycombinator.com/';
+const reqUrl = ['https://blog.ycombinator.com/', '8pounds.com'];
 const reqSelect = '.post';
 
-app.get('/', (req, res) => {
-  const stream = xray(reqUrl, reqSelect, [{
+app.get('/a', (req, res) => {
+  const stream = xray(reqUrl[0], reqSelect, [{
+    title: 'h1 a',
+    link: '.article-title@href',
+    arthur: 'span a',
+    excerpt: 'p',
+    thumbnail: 'div iframe'
+  }]).paginate('.nav-previous a@href').limit(3)
+  .stream();
+  stream.pipe(res);
+});
+
+app.get('/b', (req, res) => {
+  const stream = xray(reqUrl[1], reqSelect, [{
     title: 'h1 a',
     link: '.article-title@href',
     arthur: 'span a',
