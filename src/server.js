@@ -22,13 +22,8 @@ app.get('/a', (req, res) => {
 
 app.get('/b', (req, res) => {
   const stream = xray(reqUrl[1], '#posts_holder', [{
-    title: '',
-    link: '',
-    arthur: '',
-    excerpt: '',
-    thumbnail: ''
-  }]).paginate('.nav-previous a@href').limit(3)
-  .stream();
+    title: 'h5',
+  }]).stream();
   stream.pipe(res);
 });
 
