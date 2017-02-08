@@ -18,7 +18,6 @@ Testing two different urls ['[http://blog.ycombinator.com/](http://blog.ycombina
 
 DEVELOPMENT TIPS
 - when testing other sites add a new class to site's main blog roll div. This will allow consistent code base.
-- .nav-previous a@href' To Paginate
 
 #[X-Ray](https://github.com/lapwinglabs/x-ray)
 web scrapping testing with X-Ray.
