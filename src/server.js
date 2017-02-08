@@ -21,7 +21,7 @@ app.get('/a', (req, res) => {
 });
 
 app.get('/b', (req, res) => {
-  const stream = xray(reqUrl[1], '#posts_holder', [{
+  const stream = xray(reqUrl[1], '.oi_post', [{
     title: 'h5',
   }]).stream();
   stream.pipe(res);
