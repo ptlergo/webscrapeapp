@@ -31,10 +31,10 @@ app.get('/b', (req, res) => {
   stream.pipe(res);
 });
 
-app.get('/b', (req, res) => {
-  const stream = xray(reqUrl[2], '.oi_post', {
-    title: 'h5',
-  }).paginate('a.next.page-numbers a@href').limit(3)
+app.get('/c', (req, res) => {
+  const stream = xray(reqUrl[2], 'body', [{
+    title: '',
+  }])
   .stream();
   stream.pipe(res);
 });
