@@ -5,7 +5,7 @@ console.log('xray run');
 app = express();
 
 // URL, targeted selector, object literal structure
-const reqUrl = ['http://blog.ycombinator.com/', 'http://8pounds.com'];
+const reqUrl = ['http://blog.ycombinator.com/', 'http://8pounds.com', 'https://soundcloud.com/lapalux/sets/lustmore-1'];
 const reqSelect = '.post';
 
 app.get('/a', (req, res) => {
@@ -31,8 +31,14 @@ app.get('/b', (req, res) => {
   stream.pipe(res);
 });
 
+app.get('/b', (req, res) => {
+  const stream = xray(reqUrl[2], '.oi_post', {
+    title: 'h5',
+  }).paginate('a.next.page-numbers a@href').limit(3)
+  .stream();
+  stream.pipe(res);
+});
+
 const server = app.listen(3000, () => {
   console.log('listening to 3000');
 });
-
-// .article-title@href
