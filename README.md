@@ -1,17 +1,17 @@
 # webscrapeapp
 Simple Node App. Web Scraping With X-Ray
 
-#INSTALL
+# INSTALL
 ```
 npm install
 ```
 
-#RUN
+# RUN
 ```
 npm start
 ```
 
-#ROUTES
+# ROUTES
 Testing two different urls ['[http://blog.ycombinator.com/](http://blog.ycombinator.com/)', '[http://8pounds.com](http://8pounds.com)']
 - [Route a: Y Blogger](localhost:3000/a)
 - [Route b: 8Pounds](localhost:3000/b)
@@ -19,5 +19,5 @@ Testing two different urls ['[http://blog.ycombinator.com/](http://blog.ycombina
 DEVELOPMENT TIPS
 - when testing other sites add a new class to site's main blog roll div. This will allow consistent code base.
 
-#[X-Ray](https://github.com/lapwinglabs/x-ray)
+# [X-Ray](https://github.com/lapwinglabs/x-ray)
 web scrapping testing with X-Ray.
